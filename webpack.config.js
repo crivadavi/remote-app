@@ -1,9 +1,9 @@
 const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
 module.exports = withModuleFederationPlugin({
   
-  name: 'remote-app',
+  name: 'remoteApp',
   exposes: {
-    './CounterModule': './src/app/counter/counter.module.ts',
+    './ContainerModule': './src/app/modules/container/container.module.ts',
   },
 
   shared: {
@@ -52,7 +52,7 @@ module.exports = {
         name: "remoteApp",
         filename: "remoteEntry.js",
         exposes: {
-          './CounterModule': './src/app/counter/counter.module.ts',
+          './ContainerModule': './src/app/modules/container/container.module.ts',
         },        
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },

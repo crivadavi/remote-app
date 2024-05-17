@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CounterComponent } from './counter.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 const routes: Routes = [
   {
     path: "",
-    component: CounterComponent,
+    component: MainpageComponent,
     pathMatch: "full"
   }
 ];
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CounterRoutingModule { }
+export class ContainerRoutingModule { }
