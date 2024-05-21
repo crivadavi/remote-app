@@ -4,6 +4,8 @@ module.exports = withModuleFederationPlugin({
   name: 'remoteApp',
   exposes: {
     './ContainerModule': './src/app/modules/container/container.module.ts',
+    './CounterComponent': './src/app/modules/container/counter/counter.component.ts',
+    './OrdersComponent': './src/app/modules/container/orders/orders.component.ts'
   },
 
   shared: {
